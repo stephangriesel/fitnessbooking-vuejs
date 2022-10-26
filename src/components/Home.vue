@@ -15,8 +15,22 @@
         </nav>
       </header>
       <section>
-        <div>left</div>
-        <div>right</div>
+        <div>
+          <img width="500" src="https://res.cloudinary.com/dvme554nj/image/upload/v1666763761/fitness-website/group_tmerrb.jpg" alt="group training">
+        </div>
+        <div class="block">
+          <h2>Group Training</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eum.</p>
+        </div>
+      </section>
+      <section>
+        <div class="block">
+          <h2>Running Clinics</h2>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eum.</p>
+        </div>
+        <div>
+          <img width="500" src="https://res.cloudinary.com/dvme554nj/image/upload/v1666763761/fitness-website/run_nujjxz.jpg" alt="running clinics">
+        </div>
       </section>
 
       <footer>
@@ -75,7 +89,14 @@ nav{
 
 section{
   display:flex;
-  justify-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 footer{
