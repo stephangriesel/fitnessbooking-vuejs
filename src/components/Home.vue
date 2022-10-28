@@ -4,8 +4,8 @@
     <div class="block">
       <header>
         <nav>
-          <div>Logo</div>
-          <div>
+          <div class="logo">Logo</div>
+          <div class="menu">
             <ul>
               <li>Home</li>
               <li>About</li>
@@ -35,6 +35,7 @@
 
       <footer>
         <div>
+          <h2>Sitemap</h2>
           <ul>
             <li>Home</li>
             <li>About</li>
@@ -42,6 +43,7 @@
           </ul>
         </div>
         <div>
+          <h2>Classes</h2>
           <ul>
             <li>Reschedule</li>
             <li>Cancellation</li>
@@ -49,6 +51,7 @@
           </ul>
         </div>
         <div>
+          <h2>Locations</h2>
           <ul>
             <li>Amsterdam</li>
             <li>Berlin</li>
@@ -73,6 +76,11 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+html, body {
+  margin:0;
+  padding:0;
+}
 h1,
 h2 {
   font-weight: normal;
@@ -82,9 +90,32 @@ a {
   color: #42b983;
 }
 
+ul {
+  list-style: none;
+}
+
 nav{
   display:flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap:wrap;
+}
+
+nav ul {
+  padding:0;
+}
+
+.logo {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu ul {
+  display:flex;
+  align-items: center;
+}
+
+.menu li {
+  margin:1rem;
 }
 
 section{
@@ -93,14 +124,40 @@ section{
   flex-wrap: wrap;
 }
 
+@media only screen and (max-width: 500px){
+  /* TO DO: child element 1 */
+  section {
+    display:flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .block {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.block p {
+  margin:2rem;
+}
+
 footer{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
+  background-color:lightgray;
+  margin:2rem 0;
+  padding:0;
 }
+
+footer ul {
+  padding: 0;
+  margin:1rem 3rem;
+}
+
+footer li {
+  margin:0.5rem 0;
+}
+
 </style>
