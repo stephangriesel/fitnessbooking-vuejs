@@ -77,10 +77,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-html, body {
-  margin:0;
-  padding:0;
-}
 h1,
 h2 {
   font-weight: normal;
@@ -136,6 +132,7 @@ section{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .block p {
@@ -145,7 +142,6 @@ section{
 footer{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   background-color:lightgray;
   margin:2rem 0;
   padding:0;
