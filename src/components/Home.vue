@@ -16,7 +16,7 @@
       </header>
       <section>
         <div>
-          <img width="500" src="https://res.cloudinary.com/dvme554nj/image/upload/v1666763761/fitness-website/group_tmerrb.jpg" alt="group training">
+          <img src="https://res.cloudinary.com/dvme554nj/image/upload/v1666763761/fitness-website/group_tmerrb.jpg" alt="group training">
         </div>
         <div class="block">
           <h2>Group Training</h2>
@@ -29,7 +29,7 @@
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi, eum.</p>
         </div>
         <div>
-          <img width="500" src="https://res.cloudinary.com/dvme554nj/image/upload/v1666763761/fitness-website/run_nujjxz.jpg" alt="running clinics">
+          <img src="https://res.cloudinary.com/dvme554nj/image/upload/v1666763761/fitness-website/run_nujjxz.jpg" alt="running clinics">
         </div>
       </section>
 
@@ -74,7 +74,6 @@ export default {
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
 h1,
@@ -90,6 +89,11 @@ ul {
   list-style: none;
 }
 
+img {
+  width:100%;
+  max-width: 30em;
+}
+
 nav{
   display:flex;
   justify-content: space-evenly;
@@ -100,10 +104,18 @@ nav ul {
   padding:0;
 }
 
+@media only screen and (max-width: 500px){
+  nav {
+    display:flex;
+    flex-direction: column;
+  }
+}
+
 .logo {
   display:flex;
   align-items: center;
   justify-content: center;
+  margin:2rem;
 }
 .menu ul {
   display:flex;
@@ -114,15 +126,14 @@ nav ul {
   margin:1rem;
 }
 
-section{
+section, footer{
   display:flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: row;
+  margin:2rem 0;
 }
 
 @media only screen and (max-width: 500px){
-  /* TO DO: child element 1 */
-  section {
+  section, footer {
     display:flex;
     flex-direction: column-reverse;
   }
